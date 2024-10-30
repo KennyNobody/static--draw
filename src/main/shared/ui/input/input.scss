@@ -1,0 +1,37 @@
+.input {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-size: 16px;
+    }
+
+    &__field {
+        height: 56px;
+        font-size: 16px;
+        padding: 0 20px;
+        border-radius: 50px;
+        font-family: inherit;
+        background-color: #ffffff;
+
+        &::placeholder {
+            color: #656565;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .input {
+        gap: 5px;
+
+        &__title {
+            font-size: 13px;
+        }
+
+        &__field {
+            height: 44px;
+            font-size: 14px;
+        }
+    }
+}

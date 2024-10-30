@@ -1,0 +1,41 @@
+.modal-wheel {
+    width: 100%;
+    margin: 0 auto;
+    color: #013A51;
+    max-width: 1000px;
+    position: relative;
+    padding-right: 285px;
+
+    &__main {
+        display: flex;
+        padding: 35px;
+        min-height: 570px;
+        border-radius: 10px;
+        align-items: center;
+        background-color: #ECF9FF;
+        background-repeat: no-repeat;
+        background-position: bottom -95px right 18%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .modal-wheel {
+        max-width: 320px;
+        padding: 2px;
+        //padding-right: 2px;
+
+        &__main {
+            gap: 20px;
+            padding: 0;
+            min-height: 0;
+            flex-direction: column;
+            background-size: 120px;
+            background-position: left bottom 200px;
+        }
+
+        &__form {
+            width: 100%;
+            padding: 0px 24px;
+        }
+    }
+}

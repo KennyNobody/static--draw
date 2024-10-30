@@ -1,0 +1,40 @@
+.link {
+    display: flex;
+    min-height: 74px;
+    padding: 5px 30px;
+    align-items: center;
+    border-radius: 50px;
+    transition: 0.3s opacity;
+    justify-content: space-between;
+    background: linear-gradient(to right, #2AABEE, #229ED9);
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &__text {
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 1.45;
+        font-weight: 600;
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+        fill: #ffffff;
+        display: block;
+    }
+}
+
+@media (max-width: 1280px) {
+    .link {
+        min-height: 66px;
+        text-align: left;
+
+        &__icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

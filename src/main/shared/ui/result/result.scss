@@ -1,0 +1,40 @@
+.result {
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        color: #B11706;
+        font-size: 44px;
+        font-weight: 500;
+    }
+
+    &__caption {
+        font-size: 27px;
+
+        strong {
+            color: #B11706;
+            font-weight: 500;
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .result {
+        gap: 20px;
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__caption {
+            font-size: 20px;
+
+            strong {
+                color: #B11706;
+                font-weight: 500;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,134 @@
+.form {
+    width: 100%;
+    max-width: 360px;
+
+    &__content {
+        &[hidden] {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    &__info {
+        gap: 35px;
+        display: flex;
+        flex-direction: column;
+
+        &[hidden] {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    &__header {
+        gap: 11px;
+        display: flex;
+        font-size: 22px;
+        align-items: center;
+        margin-bottom: 20px;
+
+        strong {
+            color: #ffffff;
+            font-weight: 600;
+            padding: 5px 15px;
+            border-radius: 50px;
+            align-items: center;
+            display: inline-flex;
+            justify-content: center;
+            background-color: #013A51;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        b, span {
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+
+        b {
+            font-weight: 600;
+        }
+
+        strong {
+            font-size: 13px;
+            min-height: 36px;
+            font-weight: 600;
+            padding: 5px 15px;
+            border-radius: 50px;
+            align-items: center;
+            display: inline-flex;
+            justify-content: center;
+            background-color: #ffffff;
+            transform: translate(10px, -7px);
+        }
+    }
+
+    &__caption {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+
+    &__fields {
+        margin-bottom: 15px;
+    }
+
+    &__controls {
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1280px) {
+    .form {
+        display: flex;
+        min-height: 340px;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+
+        &__info {
+            gap: 35px;
+        }
+
+        &__header {
+            gap: 10px;
+            font-size: 15px;
+            margin-bottom: 15px;
+
+            strong {
+                padding: 5px 10px;
+            }
+        }
+
+        &__title {
+            margin-bottom: 10px;
+
+            b, span {
+                font-size: 19px;
+            }
+
+            strong {
+                display: none;
+                visibility: hidden;
+            }
+
+            br {
+                display: none;
+            }
+        }
+
+        &__caption {
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        &__fields {
+            margin-bottom: 10px;
+        }
+    }
+}
