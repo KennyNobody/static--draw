@@ -1,4 +1,5 @@
 import axios from "axios";
+import {Input} from "./input";
 
 class Form {
     el: HTMLElement;
@@ -10,9 +11,11 @@ class Form {
     constructor(el: HTMLElement) {
         this.el = el;
         this.init();
+        this.initInputs()
     }
 
     init = () => {
+        this.message = this.el.querySelector('[data-form="message"]');
         const checkbox: HTMLInputElement = this.el.querySelector('[data-form="agreement"]');
         const button: HTMLButtonElement = this.el.querySelector('[data-form="button"]');
         const buttonExample = document.querySelector('#button-wheel');
@@ -31,6 +34,16 @@ class Form {
                 this.animateWheel();
             });
         }
+
+        if (localStorage.getItem('modalDisabled')) {
+            this.blockWheel();
+        }
+    }
+
+    initInputs = () => {
+        const els: NodeListOf<HTMLElement> = this.el.querySelectorAll('[data-input]');
+
+        els.forEach((item) => new Input(item));
     }
 
     toggleAgreement = () => {
@@ -49,10 +62,15 @@ class Form {
 
         if (this.wheel) {
             this.wheel.addEventListener("animationend", () => {
-                // this.wheel.classList.remove('animate');
+                this.wheel.classList.remove('animate');
+                this.wheel.classList.add('completed');
                 this.showMessage();
             });
         }
+    }
+
+    blockWheel = () => {
+        this.wheel.classList.add('completed');
     }
 
     submitForm = (e: SubmitEvent) => {
@@ -68,10 +86,17 @@ class Form {
         axios.post(url, formData)
             .then((response) => {
                 this.message.innerHTML = 'Отправлено!'
-                this.animateWheel();
+
+                if (!localStorage.getItem('modalDisabled')) {
+                    this.animateWheel();
+                }
+
+                localStorage.setItem('modalDisabled', "true");
+                this.setMetric();
             })
             .catch((error) => {
                 console.log(error);
+                this.message.innerHTML = 'Ошибка'
             })
             .finally(() => {
                 setTimeout(() => {
@@ -88,6 +113,11 @@ class Form {
             content.setAttribute('hidden', 'hidden');
             result.removeAttribute('hidden');
         }
+    }
+
+    setMetric = () => {
+        // @ts-ignore
+        if (window?.ym) window.ym(62003239,'reachGoal','otpravka_form_koleso_fortuni')
     }
 }
 

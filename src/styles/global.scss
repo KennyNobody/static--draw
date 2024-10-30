@@ -15,3 +15,18 @@ body {
     flex-grow: 1;
     overflow-x: hidden;
 }
+
+.fancybox-wheel {
+    .fancybox__content {
+        padding: 0;
+        background: none;
+
+        & > .f-button.is-close-btn {
+            top: 5px;
+            right: 5px;
+            width: 40px;
+            height: 40px;
+            color: #B11706;
+        }
+    }
+}

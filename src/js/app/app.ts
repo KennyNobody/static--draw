@@ -1,27 +1,29 @@
 import {Input} from "./input";
 import {Form} from "./form";
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import {Modal} from "./modal";
 
 class App {
     constructor() {
         this.init();
-        this.initInputs();
         this.initForms();
+        this.initModals();
     }
 
     init = () => {
         console.log('App Inited');
     }
 
-    initInputs = () => {
-        const els: NodeListOf<HTMLElement> = document.querySelectorAll('[data-input]');
-
-        els.forEach((item) => new Input(item));
-    }
-
-    initForms = () => {
-        const els: NodeListOf<HTMLElement> = document.querySelectorAll('[data-form="main"]');
+    initForms = (el?: HTMLElement) => {
+        const parent = el ? el : document;
+        const els: NodeListOf<HTMLElement> = parent.querySelectorAll('[data-form="main"]');
 
         els.forEach((item) => new Form(item));
+    }
+
+    initModals = () => {
+        new Modal(this);
     }
 }
 

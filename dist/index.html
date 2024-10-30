@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-<link href="css/main.44e7.css" rel="stylesheet"></head>
+<link href="css/main.765a.css" rel="stylesheet"></head>
 <body>
     <header class="header">
     <div class="container">
@@ -17,84 +17,101 @@
 </header>
 
     <div class="main">
-        <div class="modal-wheel">
-    <button class="modal_close">
-        <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10 fa-3x">
-            <path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path>
-        </svg>
-    </button>
-    <div class="modal-wheel__main">
-        <div class="wheel">
-            <img src="../../shared/images/wheel-inner.png" alt="">
-        </div>
-<!--        <p class="modal-content__label">-->
-<!--            Только до <span>31 октября</span>-->
-<!--        </p>-->
+        <noindex>
+            <div class="modal-wheel" id="modal-wheel">
+        <div class="modal-wheel__main" style="background-image: url('./assets/images/iphone.png')">
+            <div class="modal-wheel__form">
+                <form action="/link/" class="form" data-form="main">
+                    <div class="form__content"  data-form="content">
+                        <button id="button-wheel" type="button">Крутить принудительно</button>
+                        <div class="form__header">
+                            <span>
+                                Только до
+                            </span>
+                            <strong>
+                                30.11
+                            </strong>
+                        </div>
+                        <h2 class="form__title">
+                            <b>РОЗЫГРЫШ iPhone <br>16 Pro</b> <span>И ДРУГИХ 5-и<br>ПОДАРКОВ</span><strong>Осталось 2 iPhone</strong>
+                        </h2>
+                        <p class="form__caption">
+                            Выигрывает каждый участвующий!
+                        </p>
+                        <div class="form__fields">
+                            <label class="input" data-input="phone">
+                                <p class="input__label">
+                                    Введите телефон и испытайте удачу:
+                                </p>
+                                <input type="text" class="input__field" data-form="input" placeholder="+7 (000) 000-00-00" required>
+                            </label>
+                        </div>
 
-
-<!--        <p class="modal-content__title modal-content__new-title">-->
-<!--            <span>ПОДАРКИ <br>ДЛЯ ВСЕХ</span><br>КРУТИ!-->
-<!--        </p>-->
-<!--        <p class="modal-content__subtitle">Выигрывает каждый участвующий!</p>-->
-<!--        <a href="https://drive.google.com/file/d/1txpiYERSiKxi1fzH-fj79IzcDUBB6N92/view" class="modal-content__link" style="display: none;" target="_blank">-->
-<!--            Забрать гайд-->
-<!--            <img class="animation" src="/bitrix/templates/aspro_next/images/download-click.gif" alt="">-->
-<!--        </a>-->
-
-<!--        <div class="form-wrap">-->
-<!--            <div class="modal-content__text">-->
-<!--                Введите телефон и испытайте удачу:-->
-<!--            </div>-->
-<!--            <div id="comp_e521e1be99c112ffee26aa6c130d2d35">-->
-<!--                <a href="#" class="close jqmClose"><i></i></a>-->
-<!--                <div class="form modal-content__form WHEEL">-->
-<!--                    <form name="WHEEL" action="/" method="POST" enctype="multipart/form-data" novalidate="novalidate">-->
-<!--                        <input type="hidden" name="bxajaxid" id="" value="">-->
-<!--                        <input type="hidden" name="AJAX_CALL" value="Y">-->
-<!--                        <input type="hidden" name="sessid" id="sessid" value="f6c1fa43d48e635c4dfcb01aa5400931">-->
-<!--                        <input type="hidden" name="WEB_FORM_ID" value="11">-->
-<!--                        <input type="hidden" name="sessid" id="sessid_1" value="f6c1fa43d48e635c4dfcb01aa5400931">-->
-<!--                        <div class="form_body">-->
-<!--                            <input type="hidden" data-sid="CLIENT_NAME" name="form_hidden_53" value="">-->
-<!--                            <div class="form-control">-->
-<!--                                <label><span>&nbsp;<span class="star">*</span></span></label>-->
-<!--                                <input type="tel" class="phone" data-sid="PHONE" required="" name="form_text_54" value="" aria-required="true" placeholder="+7 (999) 999-99-99">-->
-<!--                            </div>-->
-<!--                            <input type="hidden" name="recaptcha_token" value="">-->
-<!--                        </div>-->
-<!--                        <div class="form_footer">-->
-<!--                            <div class="licence_block filter label_block" style="display: none;">-->
-<!--                                <input type="checkbox" id="licenses_popup" name="licenses_popup" checked="" required="" value="Y" aria-required="true">-->
-<!--                                <label for="licenses_popup">-->
-<!--                                    Я согласен на <a href="/include/licenses/" target="_blank">обработку персональных данных</a> и заключаю <a href="/include/offerta/" target="_blank">договор-оферту</a>					</label>-->
-<!--                            </div>-->
-<!--                            <input type="submit" class="btn btn-default" style="display: none" value="Забрать подарок" name="web_form_submit" onclick="this.form.recaptcha_token.value = window.recaptcha.getToken()">-->
-<!--                            <button class="js-popup-wheel-submit">-->
-<!--                                Забрать подарок                <img class="animation" src="/bitrix/templates/aspro_next/images/download-click.gif" alt="">-->
-<!--                            </button>-->
-
-<!--                            <label class="checkbox-label">-->
-<!--                                <input type="checkbox" name="wheel_agree_checkbox" required="" checked="" aria-required="true">-->
-<!--                                Я подтверждаю согласие на обработку <a href="/" onclick="BX.ajax.insertToNode('/?bxajaxid=e521e1be99c112ffee26aa6c130d2d35', 'comp_e521e1be99c112ffee26aa6c130d2d35'); return false;">персональных данных</a>.-->
-<!--                            </label>-->
-<!--                        </div>-->
-<!--                        <p class="wheel-notice">*Предложение не суммируется<br> с другими акциями и скидками</p>-->
-<!--                    </form>-->
-
-<!--                </div>-->
-<!--                </div>-->
-<!--        </div>-->
-
-<!--        <div class="modal-content__image">-->
-<!--            <div class="modal-content__wheel">-->
-<!--                &lt;!&ndash; <img src="/upload/resize_cache/webp/images/wheel08022022.webp" alt="колесо"> &ndash;&gt;-->
-<!--                <img class="modal-content__wheel-pointer" src="/upload/resize_cache/webp/iblock/35b/gx7o7lwhweql9b8cajgtb8u4cntoy2mb.webp" alt="">-->
-<!--                <img class="modal-content__wheel-content" src="/upload/resize_cache/webp/iblock/3e1/tu1bda274zpx55n7x34g37uev6v0vb60.webp" alt="">-->
-<!--            </div>-->
-<!--        </div>-->
+                        <div class="form__controls">
+                            <button class="button" data-form="button">
+                                <span class="button__text" data-form="message">
+                                    Забрать подарок
+                                </span>
+                                <svg viewBox="0 0 203.079 203.079" class="button__icon">
+                                    <path d="M192.231,104.082V102c0-12.407-10.094-22.5-22.5-22.5c-2.802,0-5.484,0.519-7.961,1.459
+                                    C159.665,70.722,150.583,63,139.731,63c-2.947,0-5.76,0.575-8.341,1.61C128.667,55.162,119.624,48,109.231,48
+                                    c-2.798,0-5.496,0.541-8,1.516V22.5c0-12.407-10.094-22.5-22.5-22.5s-22.5,10.093-22.5,22.5v66.259
+                                    c-3.938-5.029-8.673-9.412-14.169-11.671c-6.133-2.52-12.587-2.219-18.667,0.872c-11.182,5.686-15.792,19.389-10.277,30.548
+                                    l27.95,56.563c0.79,1.552,19.731,38.008,54.023,38.008h40c31.54,0,57.199-25.794,57.199-57.506l-0.031-41.491H192.231z
+                                     M135.092,188.079h-40c-24.702,0-40.091-28.738-40.646-29.796l-27.88-56.42c-1.924-3.893-0.33-8.519,3.629-10.532
+                                    c2.182-1.11,4.081-1.223,6.158-0.372c8.281,3.395,16.41,19.756,19.586,29.265l2.41,7.259l12.883-4.559V22.5
+                                    c0-4.136,3.364-7.5,7.5-7.5s7.5,3.364,7.5,7.5V109h0.136h14.864h0.136V71c0-4.187,3.748-8,7.864-8c4.262,0,8,3.505,8,7.5v15v26h15
+                                    v-26c0-4.136,3.364-7.5,7.5-7.5s7.5,3.364,7.5,7.5V102v16.5h15V102c0-4.136,3.364-7.5,7.5-7.5s7.5,3.364,7.5,7.5v10.727h0.035
+                                    l0.025,32.852C177.291,169.014,158.36,188.079,135.092,188.079z"/>
+                                </svg>
+                            </button>
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__field" data-form="agreement" checked>
+                                <div class="checkbox__box">
+                                    <svg viewBox="0 0 7 5" class="checkbox__icon">
+                                        <path d="M6.28003 0.561098L2.3465 4.49463L0 2.14812L0.561098 1.58703L2.3465 3.37243L5.71893 0L6.28003 0.561098Z"/>
+                                    </svg>
+                                </div>
+                                <p class="checkbox__text">
+                                    Я подтверждаю согласие на обработку <a href="" target="_blank">персональных данных</a>
+                                </p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form__info" hidden data-form="result">
+                        <div class="result">
+                            <h2 class="result__title">
+                                Поздравляем!
+                            </h2>
+                            <p class="result__caption">
+                                Вы выиграли <strong>подарок!</strong>
+                            </p>
+                        </div>
+                        <a href="https://t.me/+I5dqL3g7U9k2YjA6 " class="link" target="_blank" rel="nofollow noopener noreferrer">
+                            <span class="link__text">
+                                Забрать подарок <br> в TELEGRAM
+                            </span>
+                            <svg viewBox="0 0 41 35" class="link__icon">
+                                <path d="M2.83049 14.9197C13.6759 10.1857 20.9062 7.06463 24.5213 5.55653C34.8553 1.25063 37 0.50279 38.4007 0.477455C38.7087 0.472504 39.3946 0.548802 39.8421 0.911364C40.2141 1.21714 40.3187 1.63067 40.371 1.92101C40.4175 2.21106 40.4814 2.87211 40.4291 3.38815C39.8712 9.28233 37.4475 23.5856 36.2153 30.1875C35.6981 32.9808 34.6693 33.9173 33.6754 34.0088C31.5133 34.208 29.8743 32.5783 27.7819 31.2044C24.5097 29.0535 22.6615 27.7151 19.4822 25.6166C15.809 23.1913 18.1919 21.8581 20.2843 19.6799C20.8306 19.1097 30.3509 10.4344 30.5311 9.64751C30.5543 9.54908 30.5776 9.18215 30.3567 8.98879C30.1417 8.79484 29.822 8.86123 29.5895 8.91365C29.2582 8.9882 24.0331 12.4525 13.8968 19.3059C12.4147 20.3275 11.0721 20.8255 9.86317 20.7993C8.538 20.7708 5.98067 20.0468 4.0801 19.4283C1.75525 18.6693 -0.0988164 18.2681 0.0639231 16.9791C0.145293 16.3082 1.06942 15.6215 2.83049 14.9197Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div class="wheel">
+                <img class="wheel__content" src="./assets/images/wheel-inner.png" alt="колесо с призами">
+                <img class="wheel__circle" src="./assets/images/wheel-border.png" alt="колесо с призами" data-wheel="main">
+            </div>
     </div>
 </div>
 
+<br>
+
+            <a class="widget" id="button-widget" style="z-index: 10;" data-fancybox="modal-wheel" href="#modal-wheel">
+    <img src="./assets/images/widget.png" alt="" class="widget__image">
+</a>
+
+        </noindex>
     </div>
     <footer class="footer">
     <div class="container">
@@ -102,5 +119,5 @@
     </div>
 </footer>
 
-<script defer src="bundle.faa7.js"></script></body>
+<script defer src="bundle.d7ed.js"></script></body>
 </html>

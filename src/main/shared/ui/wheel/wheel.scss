@@ -18,6 +18,10 @@
         &.animate {
             animation: spin 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards 1;
         }
+
+        &.completed {
+            transform: rotate(1225deg);
+        }
     }
 }
 

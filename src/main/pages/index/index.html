@@ -7,7 +7,10 @@
 <body>
     <%= htmlWebpackPlugin.options.widgets.header %>
     <div class="main">
-        <%= htmlWebpackPlugin.options.widgets.modal %>
+        <noindex>
+            <%= htmlWebpackPlugin.options.widgets.modal %>
+            <%= htmlWebpackPlugin.options.widgets.widget %>
+        </noindex>
     </div>
     <%= htmlWebpackPlugin.options.widgets.footer %>
 </body>
