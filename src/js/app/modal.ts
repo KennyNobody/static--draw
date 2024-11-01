@@ -18,13 +18,14 @@ class Modal {
         const link = document.querySelector(this.buttonId);
 
         link.addEventListener('click', () => {
-            Fancybox.show([{ src: this.modalId, type: "inline" }], {
+            Fancybox.show([{src: this.modalId, type: "inline"}], {
                 mainClass: "fancybox-wheel",
                 on: {
                     done: (el) => {
                         this.parent.initForms(el.container);
                         this.setMetric();
-                    }
+                    },
+                    destroy: this.handleModalClose
                 }
             });
         });
@@ -41,29 +42,32 @@ class Modal {
             const now = Date.now();
 
             if (!lastClosedDate || now - new Date(lastClosedDate).getTime() > oneDayInMs) {
-                Fancybox.show([{ src: this.modalId, type: "inline" }], {
-                    mainClass: "fancybox-wheel",
-                    on: {
-                        done: (el) => {
-                            this.parent.initForms(el.container);
-                            this.setMetric();
-                        },
-                        destroy: this.handleModalClose
-                    }
-                });
+                if (!Fancybox.getInstance()) {
+                    Fancybox.show([{src: this.modalId, type: "inline"}], {
+                        mainClass: "fancybox-wheel",
+                        on: {
+                            done: (el) => {
+                                this.parent.initForms(el.container);
+                                this.setMetric();
+                            },
+                            destroy: this.handleModalClose
+                        }
+                    });
+                }
             }
         }, 30000);
     };
 
     private handleModalClose = () => {
-        const button = document.querySelector("#button");
-
-        if (button) {
-            button.addEventListener("click", () => {
-                localStorage.setItem(this.disableModalKey, "true");
-                Fancybox.close();
-            });
-        }
+        // const button = document.querySelector("#button");
+        //
+        // if (button) {
+        //     button.addEventListener("click", () => {
+        //         localStorage.setItem(this.disableModalKey, "true");
+        //         Fancybox.close();
+        //     });
+        // }
+        console.log('Запоминаем дату');
 
         if (!localStorage.getItem(this.disableModalKey)) {
             localStorage.setItem(this.lastClosedDateKey, new Date().toISOString());

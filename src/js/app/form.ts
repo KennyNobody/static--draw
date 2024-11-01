@@ -7,6 +7,7 @@ class Form {
     button: HTMLButtonElement;
     message: HTMLElement;
     wheel: HTMLElement;
+    form: HTMLFormElement;
 
     constructor(el: HTMLElement) {
         this.el = el;
@@ -16,6 +17,7 @@ class Form {
 
     init = () => {
         this.message = this.el.querySelector('[data-form="message"]');
+        this.form = this.el.querySelector('form');
         const checkbox: HTMLInputElement = this.el.querySelector('[data-form="agreement"]');
         const button: HTMLButtonElement = this.el.querySelector('[data-form="button"]');
         const buttonExample = document.querySelector('#button-wheel');
@@ -55,8 +57,9 @@ class Form {
     }
 
     animateWheel = () => {
-        this.wheel = document.querySelector('[data-wheel="main"]');
+        if (!this.wheel) this.wheel = this.el.querySelector('[data-wheel="main"]');
         console.log(this.wheel);
+        console.log('Анимируем');
 
         this.wheel.classList.add('animate');
 
@@ -70,13 +73,19 @@ class Form {
     }
 
     blockWheel = () => {
-        this.wheel.classList.add('completed');
+        if (!this.wheel) this.wheel = this.el.querySelector('[data-wheel="main"]');
+
+        if (this.wheel) {
+            this.wheel.classList.add('completed');
+            this.showMessage();
+        }
+
     }
 
     submitForm = (e: SubmitEvent) => {
         e.preventDefault();
 
-        const url = this.el.getAttribute('action');
+        const url = this.form.getAttribute('action');
         const formData = new FormData();
 
         const field: HTMLInputElement = this.el.querySelector('[data-form="input"]');
